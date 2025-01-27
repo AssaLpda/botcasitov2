@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot de Respuesta Automática - Casino</title>
+
+    <!-- Agregar el enlace a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Agregar Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-lg p-4 w-100" style="max-width: 400px;">
+
+            <div class="card-body">
+                <div class="chat-box" id="chatBox">
+                    <div class="message bot-message bg-success text-white p-2 mb-2 rounded">
+                        ¡Hola! Soy tu asistente virtual del casino. ¿En qué te puedo ayudar hoy?
+                    </div>
+                </div>
+
+                <!-- Formulario de campos de usuario -->
+                <div class="user-info mb-3">
+                    <div class="mb-2">
+                        <label for="username" class="form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="username" value="Usuario123">
+                    </div>
+                    <div class="mb-2">
+                        <label for="accountHolder" class="form-label">Titular de la cuenta:</label>
+                        <input type="text" class="form-control" id="accountHolder" placeholder="Ingrese titular de la cuenta" value="" disabled>
+                    </div>
+                    <div class="mb-2">
+                        <label for="cbu" class="form-label">CBU:</label>
+                        <input type="text" class="form-control" id="cbu" placeholder="Ingrese CBU" value="" disabled>
+                    </div>
+                    <div class="mb-2">
+                        <label for="alias" class="form-label">Alias:</label>
+                        <input type="text" class="form-control" id="alias" placeholder="Ingrese alias" value="" disabled>
+                    </div>
+                </div>
+
+                <!-- Botones CBU y Editar -->
+                <div class="d-flex justify-content-between">
+                    <button id="cbuButton" class="btn btn-primary btn-sm">
+                        CBU
+                    </button>
+                    
+                    <!-- Botón Sin Saludo -->
+                    <button id="noSaludoButton" class="btn btn-secondary btn-sm" style="margin-right: 10px;">
+                        Sin Saludo
+                    </button>
+
+                    <button id="editButton" class="btn btn-warning btn-sm">
+                        <i class="bi bi-pencil-square"></i> Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista previa del mensaje -->
+        <div id="messagePreview">
+            <h4>Vista Previa del Mensaje</h4>
+            <p id="previewText">Aún no has generado el mensaje.</p>
+        </div>
+    </div>
+
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
