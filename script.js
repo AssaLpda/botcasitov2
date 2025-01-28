@@ -1,4 +1,5 @@
-// Botones
+document.addEventListener('DOMContentLoaded', function() {
+    // Botones
     const cbuButton = document.getElementById('cbuButton');
     const noSaludoButton = document.getElementById('noSaludoButton');  // Nuevo botón Sin saludo
     const editButton = document.getElementById('editButton');
@@ -236,10 +237,3 @@ function generateMessageWithoutGreeting() {
         document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
     }
 });
-
-
-
-
-
-
-
