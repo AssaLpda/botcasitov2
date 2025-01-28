@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para generar una advertencia aleatoria
     function getRandomWarningMessage() {
         const warningMessages = [
-            "¡Acordate de verificar el alias o CBU antes de transferir!❗️",
-            "No olvides revisar que el CBU y el alias sean correctos antes de realizar la transferencia.",
+            "¡Acordate de verificar el ALIAS o CBU antes de transferir!❗️",
+            "No olvides revisar que el CBU o el ALIAS sean correctos antes de realizar la transferencia.",
             "Por favor, revisá los datos antes de confirmar la operación.",
-            "Asegúrate de que los datos (alias y CBU) sean correctos antes de proceder.",
-            "Siempre es recomendable verificar que el alias y el CBU estén correctos antes de hacer la transferencia.",
-            "No te olvides de comprobar bien los datos antes de enviar el dinero.",
-            "Es importante verificar que el alias y el CBU sean correctos antes de continuar con la transferencia.",
+            "Asegúrate de que los datos (ALIAS o CBU) sean correctos antes de proceder❗️.",
+            "Siempre es recomendable verificar que el ALIAS y el CBU estén correctos antes de hacer la transferencia.",
+            "No te olvides de comprobar bien los datos antes de enviar el dinero❗️.",
+            "Es importante verificar que el ALIAS o el CBU sean correctos antes de continuar con la transferencia.",
             "Revisa los datos nuevamente para evitar errores en la transferencia."
         ];
 
