@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Botones
+// Botones
     const cbuButton = document.getElementById('cbuButton');
     const noSaludoButton = document.getElementById('noSaludoButton');  // Nuevo botón Sin saludo
     const editButton = document.getElementById('editButton');
@@ -53,12 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
             `¡Qué tal${userName ? `, ${userName}` : ''}? ¿Cómo te va?`,
             `¡Buenas buenaas${userName ? `, ${userName}` : ''}, como estas?🙌`,
             `¡Hola${userName ? ` ${userName}` : ''}! ¿Cómo va todo? 😄`,
-            `¡Hola${userName ? ` ${userName}` : ''}! ¿Cómo estás? ¡Aquí te dejo la info! 😃`,
-            `¡Buenas${userName ? `, ${userName}` : ''}! ¿Qué va todo?`,
+            `¡Hola${userName ? ` ${userName}` : ''}! ¿Cómo estás? Ahora te paso`,
+            `¡Buenas${userName ? `, ${userName}` : ''}! ¿Qué tal todo?`,
             `¡Como estas${userName ? `, ${userName}` : ''}?`,
             `¡Buenas buenaas${userName ? `, ${userName}` : ''}!!🙌`,
             `¡Holaaa${userName ? ` ${userName}` : ''} 😄`,
-            `¡Heey${userName ? ` ${userName}` : ''} ¿Cómo estás? ¡Aquí te dejo la info! 😃`
+            `¡Heey${userName ? ` ${userName}` : ''} ¿Cómo estás? 😃`
         ];
 
         // Seleccionar un saludo aleatorio
@@ -69,14 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para generar una advertencia aleatoria
     function getRandomWarningMessage() {
         const warningMessages = [
-            "¡Acordate de verificar el ALIAS o CBU antes de transferir!❗️",
-            "No olvides revisar que el CBU o el ALIAS sean correctos antes de realizar la transferencia.",
-            "Por favor, revisá los datos antes de confirmar la operación.",
-            "Asegúrate de que los datos (ALIAS o CBU) sean correctos antes de proceder❗️.",
-            "Siempre es recomendable verificar que el ALIAS y el CBU estén correctos antes de hacer la transferencia.",
-            "No te olvides de comprobar bien los datos antes de enviar el dinero❗️.",
-            "Es importante verificar que el ALIAS o el CBU sean correctos antes de continuar con la transferencia.",
-            "Revisa los datos nuevamente para evitar errores en la transferencia."
+            "*¡Acordate de verificar el ALIAS o CBU antes de transferir!*⚠️❗️",
+            "*No olvides revisar que el CBU o el ALIAS sean correctos antes de realizar la transferencia.*",
+            "*Por favor, revisá los datos antes de confirmar la operación✅.*",
+            "*Asegúrate de que los datos (ALIAS o CBU) sean correctos antes de proceder*❗️.",
+            "Siempre es recomendable verificar que el ALIAS y el CBU estén correctos antes de hacer la transferencia.⚠️",
+            "*No te olvides* de comprobar bien los datos antes de enviar el dinero❗️.",
+            "Es importante *verificar* que el ALIAS o el CBU sean correctos antes de continuar con la transferencia.",
+            "*Revisa* los datos nuevamente para evitar errores en la transferencia.❗"
         ];
 
         // Seleccionar un mensaje aleatorio
@@ -102,12 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function generateMessageWithoutGreeting() {
     // Mensajes alternativos para el inicio del mensaje
     const startMessages = [
-        "Te dejo estos datos para cargar:",
-        "Acá tenés los datos para cargar:",
-        "Te envié la info:",
-        "Aquí tienes los datos que necesitas:",
-        "Estos son los datos para que cargues:",
-        "Te paso los datos a continuación:"
+        "*Heey, te dejo estos datos para cargar*😀:",
+        "Podes enviar aca✅:",
+        "Te envié la info⬇️⬇️:",
+        "Aca tienes los datos que necesitas:✅",
+        "Estos son los datos para que cargues😊:",
+        "Dale, te paso los datos a continuación🥳:"
     ];
 
     // Elegir un mensaje aleatorio para comenzar
