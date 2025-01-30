@@ -50,15 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const userName = username.value.trim(); // Obtener el nombre del usuario
         const greetings = [
             `¡Holaaa${userName ? ` ${userName}` : ''}! ¿Cómo estás? 😊`,
-            `¡Qué tal${userName ? `, ${userName}` : ''}? ¿Cómo te va?`,
+            `¡Qué tal${userName ? `, ${userName}` : ''}❤️ ¿Cómo te va?`,
             `¡Buenas buenaas${userName ? `, ${userName}` : ''}, como estas?🙌`,
             `¡Hola${userName ? ` ${userName}` : ''}! ¿Cómo va todo? 😄`,
-            `¡Hola${userName ? ` ${userName}` : ''}! ¿Cómo estás? Ahora te paso`,
+            `¡Hola${userName ? ` ${userName}` : ''}!  Ahora te paso❤️`,
             `¡Buenas${userName ? `, ${userName}` : ''}! ¿Qué tal todo?`,
             `¡Como estas${userName ? `, ${userName}` : ''}?`,
             `¡Buenas buenaas${userName ? `, ${userName}` : ''}!!🙌`,
             `¡Holaaa${userName ? ` ${userName}` : ''} 😄`,
             `¡Heey${userName ? ` ${userName}` : ''} ¿Cómo estás? 😃`
+            `¡Buenaas${userName ? ` ${userName}` : ''} Te mandoo 😃`
+            `¡Hola Holaa${userName ? ` ${userName}` : ''} Ahi te envie`
+            `¡Hola, buenaas${userName ? ` ${userName}` : ''} Ahora te envio los datos 😃`
+            `¡Que taal?${userName ? ` ${userName}` : ''} Te envie info✅ `
+            `Como estas?${userName ? ` ${userName}` : ''} Ahora te mando `
+            `¡Holaaa ${userName ? ` ${userName}` : ''} Ahi te mando  🙌`
+            `¡Buenaas buenaaas! ${userName ? ` ${userName}` : ''} ¿Cómo te encuentras? ♥`
+            
         ];
 
         // Seleccionar un saludo aleatorio
@@ -77,6 +85,16 @@ document.addEventListener('DOMContentLoaded', function() {
             "*No te olvides* de comprobar bien los datos antes de enviar el dinero❗️.",
             "Es importante *verificar* que el ALIAS o el CBU sean correctos antes de continuar con la transferencia.",
             "*Revisa* los datos nuevamente para evitar errores en la transferencia.❗"
+            "Asegúrate de revisar el ALIAS o CBU antes de hacer la transferencia⚠️❗️."
+            "No olvides verificar que el CBU o el ALIAS sean correctos antes de proceder✅."
+            "Revisa bien los datos antes de confirmar la operación❗️."
+            "Te sugiero verificar que el ALIAS o CBU estén correctos antes de continuar⚠️."
+            "Antes de transferir, asegurate de que los datos (ALIAS o CBU) sean los correctos✅."
+            "Verifica nuevamente que el ALIAS o CBU coincidan antes de completar la transferencia❗️."
+            "Es recomendable que compruebes los datos (ALIAS o CBU) antes de realizar la operación.⚠️"
+            "No olvides comprobar los datos antes de proceder con el envío de dinero❗️."
+            "Revisa cuidadosamente que los datos sean correctos antes de continuar con la transferencia⚠️."
+            "Asegúrate de que el ALIAS y el CBU sean correctos antes de finalizar la operación✅."
         ];
 
         // Seleccionar un mensaje aleatorio
@@ -108,6 +126,13 @@ function generateMessageWithoutGreeting() {
         "Aca tienes los datos que necesitas:✅",
         "Estos son los datos para que cargues😊:",
         "Dale, te paso los datos a continuación🥳:"
+        "Dale, Envia aca porfa🥳:"
+        "¡Hola! A continuación te dejo los datos para que los cargues."
+        "¡Ey! Te dejo los datos para que cargues ahora.😊"
+        "Que onda!! Aquí están los detalles para que  cargues. ¡Cualquier duda, me avisas!"
+        "¡Hola! A continuación te paso los detalles para que puedas completar tu carga."
+        "Aca abajo tenes toda la info para cargar!⬇️⬇️"
+        "Dale, ahora te envio la info✅"
     ];
 
     // Elegir un mensaje aleatorio para comenzar
