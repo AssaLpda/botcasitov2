@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar </title>
+    <link rel="stylesheet" href="login.css">  
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <!-- Reemplazo de imagen por video -->
+            <video src="vid/bot.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="text-center mt-4 name">
+            BotV2.0
+        </div>
+        <form class="p-3 mt-3" id="loginForm">
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="userName" id="userName" placeholder="Username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="pwd" placeholder="Password">
+            </div>
+            <button class="btn mt-3" type="submit">Login</button>
+        </form>
+        <div class="text-center fs-6">
+            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        // Función de validación de login
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();  // Prevenir el envío del formulario
+
+            const userName = document.getElementById('userName').value;
+            const password = document.getElementById('pwd').value;
+
+            // Credenciales predefinidas
+            const validUser = "Assa";
+            const validPassword = "Hola123";
+
+            // Verificar las credenciales
+            if (userName === validUser && password === validPassword) {
+                // Si las credenciales son correctas, redirigir al bot.html
+                window.location.href = 'bot.html';
+            } else {
+                // Si son incorrectas, mostrar un mensaje de error
+                alert('Credenciales incorrectas. Por favor, intenta nuevamente.');
+            }
+        });
+    </script>
+</body>
+</html>
+
