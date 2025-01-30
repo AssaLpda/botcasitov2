@@ -58,15 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
             `¡Como estas${userName ? `, ${userName}` : ''}?`,
             `¡Buenas buenaas${userName ? `, ${userName}` : ''}!!🙌`,
             `¡Holaaa${userName ? ` ${userName}` : ''} 😄`,
-            `¡Heey${userName ? ` ${userName}` : ''} ¿Cómo estás? 😃`
-            `¡Buenaas${userName ? ` ${userName}` : ''} Te mandoo 😃`
-            `¡Hola Holaa${userName ? ` ${userName}` : ''} Ahi te envie`
-            `¡Hola, buenaas${userName ? ` ${userName}` : ''} Ahora te envio los datos 😃`
-            `¡Que taal?${userName ? ` ${userName}` : ''} Te envie info✅ `
-            `Como estas?${userName ? ` ${userName}` : ''} Ahora te mando `
-            `¡Holaaa ${userName ? ` ${userName}` : ''} Ahi te mando  🙌`
+            `¡Heey${userName ? ` ${userName}` : ''} ¿Cómo estás? 😃`,
+            `¡Buenaas${userName ? ` ${userName}` : ''} Te mandoo 😃`,
+            `¡Hola Holaa${userName ? ` ${userName}` : ''} Ahi te envie`,
+            `¡Hola, buenaas${userName ? ` ${userName}` : ''} Ahora te envio los datos 😃`,
+            `¡Que taal?${userName ? ` ${userName}` : ''} Te envie info✅ `,
+            `Como estas?${userName ? ` ${userName}` : ''} Ahora te mando `,
+            `¡Holaaa ${userName ? ` ${userName}` : ''} Ahi te mando  🙌`,
             `¡Buenaas buenaaas! ${userName ? ` ${userName}` : ''} ¿Cómo te encuentras? ♥`
-            
         ];
 
         // Seleccionar un saludo aleatorio
@@ -84,16 +83,16 @@ document.addEventListener('DOMContentLoaded', function() {
             "Siempre es recomendable verificar que el ALIAS y el CBU estén correctos antes de hacer la transferencia.⚠️",
             "*No te olvides* de comprobar bien los datos antes de enviar el dinero❗️.",
             "Es importante *verificar* que el ALIAS o el CBU sean correctos antes de continuar con la transferencia.",
-            "*Revisa* los datos nuevamente para evitar errores en la transferencia.❗"
-            "Asegúrate de revisar el ALIAS o CBU antes de hacer la transferencia⚠️❗️."
-            "No olvides verificar que el CBU o el ALIAS sean correctos antes de proceder✅."
-            "Revisa bien los datos antes de confirmar la operación❗️."
-            "Te sugiero verificar que el ALIAS o CBU estén correctos antes de continuar⚠️."
-            "Antes de transferir, asegurate de que los datos (ALIAS o CBU) sean los correctos✅."
-            "Verifica nuevamente que el ALIAS o CBU coincidan antes de completar la transferencia❗️."
-            "Es recomendable que compruebes los datos (ALIAS o CBU) antes de realizar la operación.⚠️"
-            "No olvides comprobar los datos antes de proceder con el envío de dinero❗️."
-            "Revisa cuidadosamente que los datos sean correctos antes de continuar con la transferencia⚠️."
+            "*Revisa* los datos nuevamente para evitar errores en la transferencia.❗",
+            "Asegúrate de revisar el ALIAS o CBU antes de hacer la transferencia⚠️❗️.",
+            "No olvides verificar que el CBU o el ALIAS sean correctos antes de proceder✅.",
+            "Revisa bien los datos antes de confirmar la operación❗️.",
+            "Te sugiero verificar que el ALIAS o CBU estén correctos antes de continuar⚠️.",
+            "Antes de transferir, asegurate de que los datos (ALIAS o CBU) sean los correctos✅.",
+            "Verifica nuevamente que el ALIAS o CBU coincidan antes de completar la transferencia❗️.",
+            "Es recomendable que compruebes los datos (ALIAS o CBU) antes de realizar la operación.⚠️",
+            "No olvides comprobar los datos antes de proceder con el envío de dinero❗️.",
+            "Revisa cuidadosamente que los datos sean correctos antes de continuar con la transferencia⚠️.",
             "Asegúrate de que el ALIAS y el CBU sean correctos antes de finalizar la operación✅."
         ];
 
@@ -117,37 +116,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para generar un mensaje corto sin saludo y con frases alternas
-function generateMessageWithoutGreeting() {
-    // Mensajes alternativos para el inicio del mensaje
-    const startMessages = [
-        "*Heey, te dejo estos datos para cargar*😀:",
-        "Podes enviar aca✅:",
-        "Te envié la info⬇️⬇️:",
-        "Aca tienes los datos que necesitas:✅",
-        "Estos son los datos para que cargues😊:",
-        "Dale, te paso los datos a continuación🥳:"
-        "Dale, Envia aca porfa🥳:"
-        "¡Hola! A continuación te dejo los datos para que los cargues."
-        "¡Ey! Te dejo los datos para que cargues ahora.😊"
-        "Que onda!! Aquí están los detalles para que  cargues. ¡Cualquier duda, me avisas!"
-        "¡Hola! A continuación te paso los detalles para que puedas completar tu carga."
-        "Aca abajo tenes toda la info para cargar!⬇️⬇️"
-        "Dale, ahora te envio la info✅"
-    ];
+    function generateMessageWithoutGreeting() {
+        // Mensajes alternativos para el inicio del mensaje
+        const startMessages = [
+            "*Heey, te dejo estos datos para cargar*😀:",
+            "Podes enviar aca✅:",
+            "Te envié la info⬇️⬇️:",
+            "Aca tienes los datos que necesitas:✅",
+            "Estos son los datos para que cargues😊:",
+            "Dale, te paso los datos a continuación🥳:",
+            "Dale, Envia aca porfa🥳:",
+            "¡Hola! A continuación te dejo los datos para que los cargues.",
+            "¡Ey! Te dejo los datos para que cargues ahora.😊",
+            "Que onda!! Aquí están los detalles para que  cargues. ¡Cualquier duda, me avisas!",
+            "¡Hola! A continuación te paso los detalles para que puedas completar tu carga.",
+            "Aca abajo tenes toda la info para cargar!⬇️⬇️",
+            "Dale, ahora te envio la info✅"
+        ];
 
-    // Elegir un mensaje aleatorio para comenzar
-    const startMessage = startMessages[Math.floor(Math.random() * startMessages.length)];
+        // Elegir un mensaje aleatorio para comenzar
+        const startMessage = startMessages[Math.floor(Math.random() * startMessages.length)];
 
-    // Mezclar los datos
-    const data = shuffleData();
+        // Mezclar los datos
+        const data = shuffleData();
 
-    // Generar el mensaje con los datos mezclados
-    return `${startMessage}\n\n` +
-           `${data[0].label}: ${data[0].value}\n` +
-           `${data[1].label}: ${data[1].value}\n` +
-           `${data[2].label}: ${data[2].value}\n\n` +
-           `${getRandomWarningMessage()}`;
-}
+        // Generar el mensaje con los datos mezclados
+        return `${startMessage}\n\n` +
+               `${data[0].label}: ${data[0].value}\n` +
+               `${data[1].label}: ${data[1].value}\n` +
+               `${data[2].label}: ${data[2].value}\n\n` +
+               `${getRandomWarningMessage()}`;
+    }
 
     // Función para generar un mensaje compacto con saludo
     function generateCompactMessage() {
@@ -201,20 +200,12 @@ function generateMessageWithoutGreeting() {
         // Mostrar el mensaje en la vista previa
         document.getElementById('previewText').innerText = message;
 
-        // Crear un elemento textarea temporal para copiar el texto
-        const tempInput = document.createElement('textarea');
-        tempInput.value = message;  // Usar el mensaje generado con saltos de línea reales
-        document.body.appendChild(tempInput);
-        
-        // Seleccionar el texto
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
-        
-        // Copiar el texto al portapapeles
-        document.execCommand('copy');
-        
-        // Eliminar el textarea temporal del DOM
-        document.body.removeChild(tempInput);
+        // Copiar al portapapeles usando la API moderna
+        navigator.clipboard.writeText(message).then(function() {
+            console.log('Mensaje copiado al portapapeles');
+        }).catch(function(err) {
+            console.error('Error al copiar al portapapeles: ', err);
+        });
 
         // Limpiar el campo "Usuario" (si lo deseas, puedes dejarlo vacío o eliminar esta línea)
         username.value = '';
@@ -228,20 +219,12 @@ function generateMessageWithoutGreeting() {
         // Mostrar el mensaje en la vista previa
         document.getElementById('previewText').innerText = message;
 
-        // Crear un elemento textarea temporal para copiar el texto
-        const tempInput = document.createElement('textarea');
-        tempInput.value = message;  // Usar el mensaje generado con saltos de línea reales
-        document.body.appendChild(tempInput);
-        
-        // Seleccionar el texto
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
-        
-        // Copiar el texto al portapapeles
-        document.execCommand('copy');
-        
-        // Eliminar el textarea temporal del DOM
-        document.body.removeChild(tempInput);
+        // Copiar al portapapeles usando la API moderna
+        navigator.clipboard.writeText(message).then(function() {
+            console.log('Mensaje copiado al portapapeles');
+        }).catch(function(err) {
+            console.error('Error al copiar al portapapeles: ', err);
+        });
 
         // Limpiar el campo "Usuario" (si lo deseas, puedes dejarlo vacío o eliminar esta línea)
         username.value = '';
@@ -262,3 +245,4 @@ function generateMessageWithoutGreeting() {
         document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
     }
 });
+
