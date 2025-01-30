@@ -158,7 +158,7 @@ function generateMessageWithoutGreeting() {
         const data = shuffleData();
 
         // Crear el mensaje con los datos mezclados
-        let message = `${greeting}\nAcá están los datos:\n\n`;
+        let message = `${greeting}\n\n\n`;
         data.forEach(item => {
             message += `${item.label}: ${item.value}\n`;
         });
@@ -176,7 +176,7 @@ function generateMessageWithoutGreeting() {
         const greeting = getRandomGreeting();
 
         return `${greeting}\n\n` +
-               `Te dejo estos datos para cargar:\n\n` +
+               `\n\n` +
                `${data[0].label}: ${data[0].value}\n\n` +
                `${data[1].label}: ${data[1].value}\n\n` +
                `${data[2].label}: ${data[2].value}\n\n` +
