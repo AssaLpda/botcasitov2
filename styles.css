@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Tarjeta de chat */
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Caja de chat */
+.chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Mensajes del bot */
+.bot-message {
+    background-color: #00b894;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Mensaje del usuario */
+.user-message {
+    background-color: #2e9fcf;
+    color: #2d3436;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Input de usuario */
+input.form-control {
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input.form-control:focus {
+    box-shadow: 0px 4px 8px rgba(0, 184, 148, 0.4);
+    outline: none;
+}
+
+/* Botones */
+.btn-sm {
+    font-size: 0.9rem;
+    border-radius: 25px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0984e3;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #74b9ff;
+    box-shadow: 0px 4px 8px rgba(9, 132, 227, 0.4);
+}
+
+.btn-secondary {
+    background-color: #636e72;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #b2bec3;
+    box-shadow: 0px 4px 8px rgba(99, 110, 114, 0.4);
+}
+
+.btn-warning {
+    background-color: #fdcb6e;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #ffeaa7;
+    box-shadow: 0px 4px 8px rgba(253, 203, 110, 0.4);
+}
+
+/* Vista previa del mensaje */
+#messagePreview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#previewText {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #0d0e0f;
+    border-radius: 10px;
+    border: 1px solid #dcdde1;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes a la tarjeta */
+.card-body {
+    padding: 20px;
+    animation: fadeIn 0.7s ease;
+}
+
+/* Transiciones suaves */
+input, button {
+    transition: all 0.3s ease;
+}
+
+input:focus, button:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mejoras responsivas */
+@media (max-width: 576px) {
+    .card {
+        max-width: 100%;
+    }
+
+    .btn-sm {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+    
+}
+
