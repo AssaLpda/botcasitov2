@@ -115,32 +115,24 @@ document.addEventListener('DOMContentLoaded', function() {
                `${getRandomWarningMessage()}`.trim();
     }
 
-    let generatedMessages = [];
-
-    function generateUniqueMessage() {
-        const availableMessages = [
+    function generateMessageWithoutGreeting() {
+        const startMessages = [
             "*Heey, te dejo estos datos para cargar*😀:",
             "Podes enviar aca✅:",
             "Te envié la info⬇️⬇️:",
-            "Aca tienes los datos que necesitas:✅",
+            "Acá tienes los datos que necesitas:✅",
             "Estos son los datos para que cargues😊:",
             "Dale, te paso los datos a continuación🥳:"
         ];
 
-        const randomIndex = Math.floor(Math.random() * availableMessages.length);
-        const selectedMessage = availableMessages[randomIndex];
+        const startMessage = startMessages[Math.floor(Math.random() * startMessages.length)];
+        const data = shuffleData();
 
-        if (generatedMessages.includes(selectedMessage)) {
-            return generateUniqueMessage();
-        }
-
-        generatedMessages.push(selectedMessage);
-
-        if (generatedMessages.length === availableMessages.length) {
-            generatedMessages = [];
-        }
-
-        return selectedMessage;
+        return `${startMessage}\n\n` +
+               `${data[0].label}: ${data[0].value}\n` +
+               `${data[1].label}: ${data[1].value}\n` +
+               `${data[2].label}: ${data[2].value}\n\n` +
+               `${getRandomWarningMessage()}`;
     }
 
     cbuButton.addEventListener('click', async function() {
