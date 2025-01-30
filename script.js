@@ -70,6 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
             "*No te olvides* de comprobar bien los datos antes de enviar el dinero❗️.",
             "Es importante *verificar* que el ALIAS o el CBU sean correctos antes de continuar con la transferencia.",
             "*Revisa* los datos nuevamente para evitar errores en la transferencia.❗",
+            "Antes de transferir, confirma que el ALIAS o CBU sean correctos. ⚠️",
+            "Verifica que el CBU o el ALIAS estén bien antes de continuar con la operación. ✅",
+            "Es clave revisar los datos antes de proceder con la transferencia. ❗️",
+            "No olvides chequear que el ALIAS y el CBU sean correctos antes de enviar el dinero. ⚠️
+            "Revisa bien los datos (CBU o ALIAS) antes de confirmar la transferencia. ✅",
+            "Siempre asegúrate de que el CBU o ALIAS estén bien ingresados antes de hacer la transferencia. ❗️",
             "Asegúrate de revisar el ALIAS o CBU antes de hacer la transferencia⚠️❗️."
         ];
 
@@ -99,9 +105,21 @@ document.addEventListener('DOMContentLoaded', function() {
             "*Heey, te dejo estos datos para cargar*😀:",
             "Podes enviar aca✅:",
             "Te envié la info⬇️⬇️:",
-            "Aca tienes los datos que necesitas:✅",
+            "Acá tienes los datos que necesitas:✅",
             "Estos son los datos para que cargues😊:",
-            "Dale, te paso los datos a continuación🥳:"
+            "Dale, te paso los datos a continuación🥳:",
+            "Aquí te dejo los datos para que cargues😊:",
+            "Mirá, te paso la info que necesitas⬇️:",
+            "Aquí tienes los datos que pediste✅:",
+            "Te comparto la información para que puedas cargar😉:",
+            "Estos son los datos que necesitas cargar📥:",
+            "Te dejo los datos a continuación👇:",
+            "Aquí van los datos que buscas⬇️:",
+            "Acá tenés la información que necesitas✅:",
+            "Te paso los datos que me pediste:",
+            "Dale ahi te los mando😉",
+            "De unaa, acá tenes para cargar",
+            "Mirá los datos para cargar a continuación👇:"
         ];
 
         // Elegir un mensaje aleatorio para comenzar
@@ -152,6 +170,39 @@ document.addEventListener('DOMContentLoaded', function() {
                `${getRandomWarningMessage()}\n`;  // Espacio antes de la advertencia
     }
 
+    // Función para generar un mensaje sin repetir
+    let generatedMessages = [];
+
+    function generateUniqueMessage() {
+        const availableMessages = [
+            "*Heey, te dejo estos datos para cargar*😀:",
+            "Podes enviar aca✅:",
+            "Te envié la info⬇️⬇️:",
+            "Aca tienes los datos que necesitas:✅",
+            "Estos son los datos para que cargues😊:",
+            "Dale, te paso los datos a continuación🥳:"
+        ];
+
+        // Seleccionar un mensaje aleatorio
+        const randomIndex = Math.floor(Math.random() * availableMessages.length);
+        const selectedMessage = availableMessages[randomIndex];
+
+        // Si ya se ha utilizado este mensaje, volvemos a intentar
+        if (generatedMessages.includes(selectedMessage)) {
+            return generateUniqueMessage();
+        }
+
+        // Agregar el mensaje al historial
+        generatedMessages.push(selectedMessage);
+
+        // Si todos los mensajes ya han sido generados, reiniciamos el historial
+        if (generatedMessages.length === availableMessages.length) {
+            generatedMessages = [];
+        }
+
+        return selectedMessage;
+    }
+
     // Evento para el botón "CBU"
     cbuButton.addEventListener('click', function() {
         // Obtener el nombre de usuario (puede estar vacío)
@@ -191,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Evento para el botón "Sin Saludo"
     noSaludoButton.addEventListener('click', function() {
-        // Generar mensaje sin saludo
+        // Generar mensaje sin saludo y sin repetir
         const message = generateMessageWithoutGreeting();
 
         // Mostrar el mensaje en la vista previa
