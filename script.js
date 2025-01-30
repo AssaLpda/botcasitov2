@@ -88,48 +88,31 @@ document.addEventListener('DOMContentLoaded', function() {
         return data;
     }
 
-    function generateMessageWithoutGreeting() {
-        const startMessages = [
-            "*Heey, te dejo estos datos para cargar*😀:",
-            "Podes enviar aca✅:",
-            "Te envié la info⬇️⬇️:",
-            "Acá tienes los datos que necesitas:✅",
-            "Estos son los datos para que cargues😊:",
-            "Dale, te paso los datos a continuación🥳:"
-        ];
-
-        const startMessage = startMessages[Math.floor(Math.random() * startMessages.length)];
-        const data = shuffleData();
-
-        return `${startMessage}\n\n` +
-               `${data[0].label}: ${data[0].value}\n` +
-               `${data[1].label}: ${data[1].value}\n` +
-               `${data[2].label}: ${data[2].value}\n\n` +
-               `${getRandomWarningMessage()}`;
-    }
-
+    // Modificación: Compactar el formato, sin saltos innecesarios.
     function generateCompactMessage() {
         const greeting = getRandomGreeting();
         const data = shuffleData();
 
+        // Crear el mensaje con los datos compactos (sin espacios excesivos)
         let message = `${greeting}\n\n`;
         data.forEach(item => {
             message += `${item.label}: ${item.value}\n`;
         });
 
         message += `\n${getRandomWarningMessage()}`;
-        return message;
+        return message.trim();  // Trim para eliminar posibles saltos de línea extra al final
     }
 
+    // Modificación: Compactar el formato del mensaje detallado.
     function generateDetailedMessage() {
         const data = shuffleData();
         const greeting = getRandomGreeting();
 
         return `${greeting}\n\n` +
-               `${data[0].label}: ${data[0].value}\n\n` +
-               `${data[1].label}: ${data[1].value}\n\n` +
+               `${data[0].label}: ${data[0].value}\n` +
+               `${data[1].label}: ${data[1].value}\n` +
                `${data[2].label}: ${data[2].value}\n\n` +
-               `${getRandomWarningMessage()}\n`;
+               `${getRandomWarningMessage()}\n`.trim();
     }
 
     let generatedMessages = [];
@@ -197,3 +180,4 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleEditMode();
     });
 });
+
