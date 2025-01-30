@@ -141,11 +141,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = shuffleData();
 
         // Generar el mensaje con los datos mezclados
-        return `${startMessage}\n\n` +
-               `${data[0].label}: ${data[0].value}\n` +
-               `${data[1].label}: ${data[1].value}\n` +
-               `${data[2].label}: ${data[2].value}\n\n` +
-               `${getRandomWarningMessage()}`;
+        let message = `${startMessage}\n\n`;
+
+        // Añadir los datos solo si no están vacíos
+        data.forEach(item => {
+            if (item.value.trim() !== "") {
+                message += `${item.label}: ${item.value}\n`;
+            }
+        });
+
+        message += `\n${getRandomWarningMessage()}`;
+        return message;
     }
 
     // Función para generar un mensaje compacto con saludo
@@ -157,11 +163,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = shuffleData();
 
         // Crear el mensaje con los datos mezclados
-        let message = `${greeting}\n\n\n`;
+        let message = `${greeting}\n`;
+
+        // Añadir los datos solo si no están vacíos
         data.forEach(item => {
-            message += `${item.label}: ${item.value}\n`;
+            if (item.value.trim() !== "") {
+                message += `${item.label}: ${item.value}\n`;
+            }
         });
 
+        // Añadir una advertencia al final
         message += `\n${getRandomWarningMessage()}`;
         return message;
     }
@@ -174,12 +185,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Obtener el saludo con nombre de usuario si está presente
         const greeting = getRandomGreeting();
 
-        return `${greeting}\n\n` +
-               `\n\n` +
-               `${data[0].label}: ${data[0].value}\n\n` +
-               `${data[1].label}: ${data[1].value}\n\n` +
-               `${data[2].label}: ${data[2].value}\n\n` +
-               `${getRandomWarningMessage()}\n`;
+        let message = `${greeting}\n`;
+
+        // Añadir los datos solo si no están vacíos
+        data.forEach(item => {
+            if (item.value.trim() !== "") {
+                message += `${item.label}: ${item.value}\n`;
+            }
+        });
+
+        // Añadir una advertencia al final
+        message += `\n${getRandomWarningMessage()}`;
+        return message;
     }
 
     // Evento para el botón "CBU"
@@ -200,12 +217,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar el mensaje en la vista previa
         document.getElementById('previewText').innerText = message;
 
-        // Copiar al portapapeles usando la API moderna
-        navigator.clipboard.writeText(message).then(function() {
-            console.log('Mensaje copiado al portapapeles');
-        }).catch(function(err) {
-            console.error('Error al copiar al portapapeles: ', err);
-        });
+        // Crear un elemento textarea temporal para copiar el texto
+        const tempInput = document.createElement('textarea');
+        tempInput.value = message;  // Usar el mensaje generado con saltos de línea reales
+        document.body.appendChild(tempInput);
+        
+        // Seleccionar el texto
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
+        
+        // Copiar el texto al portapapeles
+        document.execCommand('copy');
+        
+        // Eliminar el textarea temporal del DOM
+        document.body.removeChild(tempInput);
 
         // Limpiar el campo "Usuario" (si lo deseas, puedes dejarlo vacío o eliminar esta línea)
         username.value = '';
@@ -244,5 +269,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('chatBox').appendChild(messageElement);
         document.getElementById('chatBox').scrollTop = document.getElementById('chatBox').scrollHeight;
     }
+
+    // Evento para presionar ENTER en el campo de usuario
+    username.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Si se presionó ENTER, simular el clic en el botón "CBU"
+            cbuButton.click();
+        }
+    });
 });
 
