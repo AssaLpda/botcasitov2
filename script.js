@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Crear el mensaje con los datos compactos (sin espacios excesivos)
         let message = `${greeting}\n\n`;
         data.forEach(item => {
-            message += `${item.label}: ${item.value}\n`;
+            message += `${item.label}: ${item.value}\n`;  // No se añaden saltos adicionales
         });
 
         message += `\n${getRandomWarningMessage()}`;
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                `${data[0].label}: ${data[0].value}\n` +
                `${data[1].label}: ${data[1].value}\n` +
                `${data[2].label}: ${data[2].value}\n\n` +
-               `${getRandomWarningMessage()}\n`.trim();
+               `${getRandomWarningMessage()}`.trim();
     }
 
     let generatedMessages = [];
@@ -180,4 +180,3 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleEditMode();
     });
 });
-
